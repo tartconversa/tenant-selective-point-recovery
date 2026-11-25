@@ -1,0 +1,10 @@
+BEGIN TRANSACTION;
+CREATE TABLE "earliest_attendance" (attendance_id TEXT PRIMARY KEY, learner_id TEXT, marked INTEGER);
+INSERT INTO "earliest_attendance" VALUES('r3','r2',1);
+CREATE TABLE "earliest_course" (course_id TEXT PRIMARY KEY, tenant TEXT, local_no TEXT, code TEXT);
+INSERT INTO "earliest_course" VALUES('r1','bay','B1','x');
+CREATE TABLE "earliest_learner" (learner_id TEXT PRIMARY KEY, course_id TEXT);
+INSERT INTO "earliest_learner" VALUES('r2','r1');
+CREATE TABLE "earliest_trade" (code TEXT PRIMARY KEY, sector TEXT, title TEXT);
+INSERT INTO "earliest_trade" VALUES('x','care','陪护');
+COMMIT;

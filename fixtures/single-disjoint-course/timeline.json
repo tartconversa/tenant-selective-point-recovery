@@ -1,0 +1,25 @@
+[
+  {
+    "pos": 4,
+    "kind": "inspect",
+    "tenant": "bay",
+    "position": 3,
+    "courses": [
+      "r1"
+    ]
+  },
+  {
+    "pos": 5,
+    "kind": "approve",
+    "receipt": "ok",
+    "tenant": "bay",
+    "courses": [
+      "r1"
+    ]
+  },
+  {
+    "pos": 6,
+    "kind": "undo",
+    "receipt": "ok"
+  }
+]

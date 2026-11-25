@@ -1,0 +1,192 @@
+[
+  {
+    "pos": 11,
+    "kind": "journal",
+    "position": 11,
+    "shape": "old",
+    "tx": "shared",
+    "rows": [
+      [
+        "update",
+        "attendance",
+        [
+          "m1",
+          "p1",
+          1
+        ],
+        [
+          "m1",
+          "p1",
+          0
+        ]
+      ],
+      [
+        "update",
+        "attendance",
+        [
+          "m2",
+          "p2",
+          1
+        ],
+        [
+          "m2",
+          "p2",
+          0
+        ]
+      ]
+    ]
+  },
+  {
+    "pos": 13,
+    "kind": "journal",
+    "position": 13,
+    "shape": "old",
+    "tx": "purge",
+    "rows": [
+      [
+        "delete",
+        "attendance",
+        [
+          "m1",
+          "p1",
+          0
+        ]
+      ],
+      [
+        "delete",
+        "attendance",
+        [
+          "m3",
+          "p3",
+          0
+        ]
+      ],
+      [
+        "delete",
+        "attendance",
+        [
+          "m4",
+          "p4",
+          1
+        ]
+      ],
+      [
+        "delete",
+        "learner",
+        [
+          "p1",
+          "a1"
+        ]
+      ],
+      [
+        "delete",
+        "learner",
+        [
+          "p3",
+          "a2"
+        ]
+      ],
+      [
+        "delete",
+        "learner",
+        [
+          "p4",
+          "a3"
+        ]
+      ],
+      [
+        "delete",
+        "course",
+        [
+          "a1",
+          "north",
+          "N08",
+          "w"
+        ]
+      ],
+      [
+        "delete",
+        "course",
+        [
+          "a2",
+          "north",
+          "N09",
+          "e"
+        ]
+      ],
+      [
+        "delete",
+        "course",
+        [
+          "a3",
+          "north",
+          "N10",
+          "w"
+        ]
+      ]
+    ]
+  },
+  {
+    "pos": 15,
+    "kind": "inspect",
+    "tenant": "north",
+    "position": 11,
+    "courses": [
+      "a1",
+      "a2",
+      "a3"
+    ]
+  },
+  {
+    "pos": 16,
+    "kind": "concurrent",
+    "target": "live_course",
+    "insert": [
+      "new",
+      "north",
+      "N08",
+      "w"
+    ]
+  },
+  {
+    "pos": 17,
+    "kind": "approve",
+    "receipt": "rec1",
+    "tenant": "north",
+    "courses": [
+      "a1",
+      "a2",
+      "a3"
+    ]
+  },
+  {
+    "pos": 18,
+    "kind": "restart",
+    "program": "restore"
+  },
+  {
+    "pos": 19,
+    "kind": "approve",
+    "receipt": "rec1",
+    "tenant": "north",
+    "courses": [
+      "a1",
+      "a2",
+      "a3"
+    ]
+  },
+  {
+    "pos": 20,
+    "kind": "concurrent",
+    "target": "live_learner",
+    "insert": [
+      "new-p",
+      "a3"
+    ]
+  },
+  {
+    "pos": 21,
+    "kind": "undo",
+    "receipt": "rec1"
+  }
+]

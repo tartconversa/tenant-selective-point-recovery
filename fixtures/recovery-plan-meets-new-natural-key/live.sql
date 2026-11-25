@@ -1,0 +1,11 @@
+BEGIN TRANSACTION;
+CREATE TABLE "live_attendance" (attendance_id TEXT PRIMARY KEY, learner_id TEXT, marked INTEGER);
+INSERT INTO "live_attendance" VALUES('m2','p2',0);
+CREATE TABLE "live_course" (course_id TEXT PRIMARY KEY, tenant TEXT, local_no TEXT, code TEXT);
+INSERT INTO "live_course" VALUES('b1','south','S27','w');
+CREATE TABLE "live_learner" (learner_id TEXT PRIMARY KEY, course_id TEXT);
+INSERT INTO "live_learner" VALUES('p2','b1');
+CREATE TABLE "live_trade" (code TEXT PRIMARY KEY, industry TEXT, title TEXT);
+INSERT INTO "live_trade" VALUES('w','manufacturing','焊接证书新版');
+INSERT INTO "live_trade" VALUES('old','service','旧类');
+COMMIT;

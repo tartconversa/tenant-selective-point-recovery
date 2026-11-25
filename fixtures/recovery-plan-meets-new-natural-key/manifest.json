@@ -1,0 +1,27 @@
+{
+  "databases": {
+    "earliest": {
+      "file": "earliest.sql",
+      "rows": {
+        "earliest_trade": 2,
+        "earliest_course": 4,
+        "earliest_learner": 4,
+        "earliest_attendance": 4
+      }
+    },
+    "live": {
+      "file": "live.sql",
+      "rows": {
+        "live_trade": 2,
+        "live_course": 1,
+        "live_learner": 1,
+        "live_attendance": 1
+      }
+    }
+  },
+  "events": 9,
+  "documents": [],
+  "settings": {
+    "base_position": 10
+  }
+}
